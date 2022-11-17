@@ -1,1 +1,3 @@
-
+SELECT *
+FROM person
+LIMIT 100;
