@@ -1,44 +1,54 @@
-select
-	(
-		select
-			hospitalcode
-		from
-			opdconfig
-		limit 1
-	) as HOSPCODE,
-	p.hn as HN,
-	p.cid as CID,
-	p.pname as TITLE,
-	p.fname as FNAME,
-	p.lname as LNAME,
-	date_format(p.birthday, '%Y%m%d') as BIRTH,
-	p.SEX,
-	p.marrystatus as MARRIAGE,
-	p.OCCUPATION,
-	p.nationality as NATION,
-	'1' as IDTYPE,
-	p.chwpart as CHANGWAT,
-	p.amppart as AMPHUR,
-	p.tmbpart as TAMBOL,
-	p.type_area as TYPEAREA,
-	date_format(now(), '%Y%m%d%H%i%s') as D_UPDATE
-from
-	patient as p
-where
-	EXISTS (
-		select
-			hn
-		from
-			ovst as o
-		where
-			o.hn = p.hn
-			and o.vstdate between $1 and $2
-			and EXISTS (
-				select
-					vn
-				from
-					ovstdiag od
-				where
-					od.vn = o.vn
-			)
-	);
+SELECT
+  (
+    SELECT
+      hospitalcode
+    FROM
+      opdconfig
+    LIMIT 1
+  ) AS HOSPCODE,
+  p.hn AS HN,
+  p.cid AS CID,
+  p.pname AS TITLE,
+  p.fname AS FNAME,
+  p.lname AS LNAME,
+  DATE_FORMAT(p.birthday, '%Y%m%d') AS BIRTH,
+  p.SEX,
+  p.marrystatus AS MARRIAGE,
+  p.OCCUPATION,
+  p.nationality AS NATION,
+  '1' AS IDTYPE,
+  p.chwpart AS CHANGWAT,
+  p.amppart AS AMPHUR,
+  p.tmbpart AS TAMBOL,
+  p.type_area AS TYPEAREA,
+  DATE_FORMAT(now(), '%Y%m%d%H%i%s') AS D_UPDATE
+FROM
+  patient AS p
+WHERE
+  EXISTS (
+    SELECT
+      hn
+    FROM
+      ovst AS o
+    WHERE
+      o.hn = p.hn
+      AND o.vstdate BETWEEN ? AND ?
+      AND 
+      EXISTS (
+        SELECT
+          hn
+        FROM
+          ovstdiag od
+        WHERE
+          od.vn = o.vn
+      )
+  )
+  OR EXISTS (
+    SELECT
+      i.hn
+    FROM
+      ipt AS i
+    WHERE
+      i.hn = p.hn
+      AND i.dchdate BETWEEN ? AND ?
+  );
