@@ -30,7 +30,7 @@ FROM
 INNER JOIN opdscreen AS os on
   os.vn = o.vn
 WHERE
-  o.vstdate BETWEEN ? AND ?
+  o.vstdate BETWEEN $1 AND $2
   AND EXISTS (
     SELECT
       vn
