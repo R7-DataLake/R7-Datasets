@@ -32,7 +32,7 @@ WHERE
       ovst AS o
     WHERE
       o.hn = p.hn
-      AND o.vstdate BETWEEN ? AND ?
+      AND o.vstdate BETWEEN $1 AND $2
       AND 
       EXISTS (
         SELECT
@@ -50,5 +50,5 @@ WHERE
       ipt AS i
     WHERE
       i.hn = p.hn
-      AND i.dchdate BETWEEN ? AND ?
+      AND i.dchdate BETWEEN $3 AND $4
   );
