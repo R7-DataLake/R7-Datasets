@@ -12,7 +12,7 @@ SELECT
 	od.icd10 AS DIAG,
 	od.diagtype AS DXTYPE,
 	od.doctor AS PROVIDER,
-	DATE_FORMAT(now(), '%Y%m%d%H%i%s') as D_UPDATE
+	DATE_FORMAT(now(), '%Y%m%d%H%i%s') AS D_UPDATE
 FROM
 	ovstdiag od
 WHERE
