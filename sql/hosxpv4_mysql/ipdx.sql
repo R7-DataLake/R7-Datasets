@@ -11,7 +11,7 @@ SELECT
   idx.icd10 AS DIAG,
   idx.diagtype AS DXTYPE,
   idx.doctor AS PROVIDER,
-  DATE_FORMAT(now(), '%Y%m%d%H%i%s') as D_UPDATE
+  DATE_FORMAT(now(), '%Y%m%d%H%i%s') AS D_UPDATE
 FROM
   iptdiag AS idx
 INNER JOIN ipt AS i ON
