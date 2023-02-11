@@ -21,7 +21,7 @@ select
 	p.amppart as AMPHUR,
 	p.tmbpart as TAMBOL,
 	p.type_area as TYPEAREA,
-	date_format(now(), '%Y%m%d%H%i%s') as DUPDATE
+	date_format(now(), '%Y%m%d%H%i%s') as D_UPDATE
 from
 	patient as p
 where
