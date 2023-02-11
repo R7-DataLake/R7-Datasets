@@ -1,0 +1,222 @@
+{
+  "version": "1.0.0",
+  "his": {
+    "code": "hosxpv4_mysql",
+    "name": "HOSxP Version 4 (MySQL)"
+  },
+  "database": "mysql",
+  "sql_dir": "hosxpv4_mysql",
+  "dataset": [
+    {
+      "name": "PERSON",
+      "file": "person.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        },
+        {
+          "$3": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$4": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ],
+      "description": "ข้อมูลประชากรที่มารับบริการ",
+      "type": [
+        "SERVICE",
+        "COLLECT"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/person"
+    },
+    {
+      "name": "CHRONIC",
+      "file": "chronic.sql",
+      "params": [],
+      "description": "ทะเบียนโรคเรื้อรัง",
+      "type": [
+        "COLLECT"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/chronic"
+    },
+    {
+      "name": "OPD",
+      "file": "opd.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ],
+      "description": "ข้อมูลรับบริการผู้ป่วยนอก",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opd"
+    },
+    {
+      "name": "OPDX",
+      "file": "opdx.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ],
+      "description": "ข้อมูลหัตถการผู้ป่วยนอก",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opdx"
+    },
+    {
+      "name": "OPOP",
+      "file": "opop.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ],
+      "description": "ข้อมูลหัตถการผู้ป่วยนอก",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opop"
+    },
+    {
+      "name": "IPD",
+      "file": "ipd.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ],
+      "description": "ข้อมูลผู้ป่วยนอก",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipd"
+    },
+    {
+      "name": "IPDX",
+      "file": "ipdx.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ],
+      "description": "ข้อมูลวินิจฉัยโรคผู้ป่วยใน",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipdx"
+    },
+    {
+      "name": "IPOP",
+      "file": "ipop.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ],
+      "description": "ข้อมูลหัตถการผู้ป่วยใน",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipop"
+    },
+    {
+      "name": "DRUG",
+      "file": "drug.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        },
+        {
+          "$3": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$4": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ],
+      "description": "ข้อมูลยาและเวชภัณฑ์มิใช่ยา",
+      "type": "SERVICE",
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/drug"
+    },
+    {
+      "name": "LAB",
+      "file": "lab.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ],
+      "description": "ข้อมูลผลตรวจทางห้องปฏิบัติการ",
+      "type": "SERVICE",
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/lab"
+    },
+    {
+      "name": "APPOINT",
+      "file": "appoint.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ],
+      "description": "ข้อมูลการนัด",
+      "type": "SERVICE",
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/stdandard/appoint"
+    }
+  ]
+}
