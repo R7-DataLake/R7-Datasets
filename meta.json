@@ -8,7 +8,7 @@
       "updated": "2023-02-11",
       "his": [
         "HOSxP version 3",
-        "HOSxP version 4 (PostgreSQL, MySQL)"
+        "HOSxP version 4 (MySQL)"
       ],
       "path": "./standard"
     },
@@ -19,7 +19,7 @@
       "updated": "2023-02-11",
       "his": [
         "HOSxP version 3",
-        "HOSxP version 4 (PostgreSQL, MySQL)"
+        "HOSxP version 4 (MySQL)"
       ],
       "path": "./refer"
     }
