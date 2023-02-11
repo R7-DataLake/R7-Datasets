@@ -49,6 +49,5 @@ WHERE
     FROM
       ipt AS i
     WHERE
-      i.hn = p.hn
-      AND i.dchdate BETWEEN $3 AND $4
+      i.dchdate BETWEEN $3 AND $4
   );
