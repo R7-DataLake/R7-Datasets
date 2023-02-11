@@ -1,0 +1,90 @@
+{
+  "version": "1.0.0",
+  "path": [
+    {
+      "his_type": "hosxpv4_mysql",
+      "database_type": "mysql",
+      "files": [
+        {
+          "name": "appoint.sql",
+          "params": [{"$1": "start_date", "$2": "end_date"}],
+          "description": "ข้อมูลนัดหมาย"
+        }
+      ]
+    }
+  ],
+  "dataset": [
+    {
+      "name": "PERSON",
+      "type": [
+        "SERVICE",
+        "COLLECT"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/person"
+    },
+    {
+      "name": "CHRONIC",
+      "type": [
+        "COLLECT"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/person"
+    },
+    {
+      "name": "OPD",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opd"
+    },
+    {
+      "name": "OPDX",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opdx"
+    },
+    {
+      "name": "OPOP",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opop"
+    },
+    {
+      "name": "IPD",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipd"
+    },
+    {
+      "name": "IPDX",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipdx"
+    },
+    {
+      "name": "IPOP",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipop"
+    },
+    {
+      "name": "DRUG",
+      "type": "SERVICE",
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/drug"
+    },
+    {
+      "name": "LAB",
+      "type": "SERVICE",
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/lab"
+    },
+    {
+      "name": "APPOINT",
+      "type": "SERVICE",
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/stdandard/appoint"
+    }
+  ]
+}
