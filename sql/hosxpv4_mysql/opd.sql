@@ -24,7 +24,7 @@ SELECT
 	o.hospmain AS INS_HOSPMAIN,
 	o.hospsub AS INS_HOSPSUB,
 	o.diag_text AS DIAG_TEXT,
-	date_format(now(), '%Y%m%d%H%i%s') as D_UPDATE
+	DATE_FORMAT(now(), '%Y%m%d%H%i%s') as D_UPDATE
 FROM
 	ovst AS o
 INNER JOIN opdscreen as os on
