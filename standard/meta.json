@@ -1,0 +1,12 @@
+{
+  "name": "Standard Dataset",
+  "description": "มาตรฐานข้อมูลเขตสุขภาพที่ 7",
+  "version": "1.0.0",
+  "updated": "2023-02-11",
+  "supported_his": [
+    "HOSxP version 3",
+    "HOSxP version 4 (PostgreSQL, MySQL)",
+    "MKHIS (รพ.มหาสารคาม)",
+    "IHOS (รพ.ขอนแก่น)"
+  ]
+}
