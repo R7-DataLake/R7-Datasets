@@ -6,22 +6,16 @@ SELECT
       opdconfig
     LIMIT 1
   ) AS HOSPCODE,
-  od.hn AS HN,
-  od.vn AS SEQ,
-  DATE_FORMAT(od.vstdate, '%Y%m%d') as DATEOP,
-  od.icd10 AS OPER,
-  od.doctor AS PROVIDER,
-  0 AS SERVPRICE,
+  o.hn AS HN,
+  o.vn AS SEQ,
+  DATE_FORMAT(o.vstdate, '%Y%m%d') as DATEOP,
+  do.icd9 AS OPER,
+  do.doctor AS PROVIDER,
+  do.price AS SERVPRICE,
   DATE_FORMAT(now(), '%Y%m%d%H%i%s') as D_UPDATE
 FROM
-  ovstdiag AS od
+  doctor_operation AS do
 INNER JOIN ovst AS o ON
-  o.vn = od.vn
+  o.vn = do.vn
 WHERE
-  LEFT(
-    od.icd10,
-    1
-  ) IN (
-    '1', '2', '3', '4', '5', '6', '7', '8', '9'
-  )
-  AND o.vstdate BETWEEN $1 AND $2;
+  o.vstdate BETWEEN $1 AND $2;
