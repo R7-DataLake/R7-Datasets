@@ -1,4 +1,3 @@
-
 select
 	(
 		select
@@ -6,23 +5,23 @@ select
 		from
 			opdconfig
 		limit 1
-	) as hospcode,
-	p.hn,
-	p.cid,
-	p.pname as title,
-	p.fname,
-	p.lname,
-	date_format(p.birthday, '%Y%m%d') as birth,
-	p.sex,
-	p.marrystatus as marriage,
-	p.occupation,
-	p.nationality as nation,
-	'1' as idtype,
-	p.chwpart as changwat,
-	p.amppart as amphur,
-	p.tmbpart as tambol,
-	p.type_area as typearea,
-	date_format(now(), '%Y%m%d%H%i%s') as dUpdate
+	) as HOSPCODE,
+	p.hn as HN,
+	p.cid as CID,
+	p.pname as TITLE,
+	p.fname as FNAME,
+	p.lname as LNAME,
+	date_format(p.birthday, '%Y%m%d') as BIRTH,
+	p.SEX,
+	p.marrystatus as MARRIAGE,
+	p.OCCUPATION,
+	p.nationality as NATION,
+	'1' as IDTYPE,
+	p.chwpart as CHANGWAT,
+	p.amppart as AMPHUR,
+	p.tmbpart as TAMBOL,
+	p.type_area as TYPEAREA,
+	date_format(now(), '%Y%m%d%H%i%s') as DUPDATE
 from
 	patient as p
 where
