@@ -11,17 +11,6 @@
         "HOSxP version 4 (MySQL)"
       ],
       "path": "./standard"
-    },
-    {
-      "name": "ชุดข้อมูลการส่งต่อ (Refer)",
-      "description": "มาตรฐานข้อมูลสำหรับการส่งต่อในเขตสุขภาพที่ 7",
-      "version": "1.0.0",
-      "updated": "2023-02-11",
-      "his": [
-        "HOSxP version 3",
-        "HOSxP version 4 (MySQL)"
-      ],
-      "path": "./refer"
     }
   ]
 }
