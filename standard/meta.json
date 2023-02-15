@@ -4,8 +4,89 @@
   "description": "มาตรฐานข้อมูลเขตสุขภาพที่ 7",
   "version": "1.0.0",
   "updated": "2023-02-11",
-  "his": [
-    "HOSxP version 3",
-    "HOSxP version 4 (MySQL)"
+  "dataset": [
+    {
+      "name": "PERSON",
+      "description": "ข้อมูลประชากรที่มารับบริการ",
+      "type": [
+        "SERVICE",
+        "COLLECT"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/person"
+    },
+    {
+      "name": "CHRONIC",
+      "description": "ทะเบียนโรคเรื้อรัง",
+      "type": [
+        "COLLECT"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/chronic"
+    },
+    {
+      "name": "OPD",
+      "description": "ข้อมูลรับบริการผู้ป่วยนอก",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opd"
+    },
+    {
+      "name": "OPDX",
+      "description": "ข้อมูลหัตถการผู้ป่วยนอก",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opdx"
+    },
+    {
+      "name": "OPOP",
+      "description": "ข้อมูลหัตถการผู้ป่วยนอก",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opop"
+    },
+    {
+      "name": "IPD",
+      "description": "ข้อมูลผู้ป่วยนอก",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipd"
+    },
+    {
+      "name": "IPDX",
+      "description": "ข้อมูลวินิจฉัยโรคผู้ป่วยใน",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipdx"
+    },
+    {
+      "name": "IPOP",
+      "description": "ข้อมูลหัตถการผู้ป่วยใน",
+      "type": [
+        "SERVICE"
+      ],
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipop"
+    },
+    {
+      "name": "DRUG",
+      "description": "ข้อมูลยาและเวชภัณฑ์มิใช่ยา",
+      "type": "SERVICE",
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/drug"
+    },
+    {
+      "name": "LAB",
+      "description": "ข้อมูลผลตรวจทางห้องปฏิบัติการ",
+      "type": "SERVICE",
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/lab"
+    },
+    {
+      "name": "APPOINT",
+      "description": "ข้อมูลการนัด",
+      "type": "SERVICE",
+      "endpoint": "https://r7.moph.go.th/platform/api/v1/stdandard/appoint"
+    }
   ]
 }

@@ -27,23 +27,12 @@
           "$4": "end_date",
           "description": "วันที่สิ้นสุด"
         }
-      ],
-      "description": "ข้อมูลประชากรที่มารับบริการ",
-      "type": [
-        "SERVICE",
-        "COLLECT"
-      ],
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/person"
+      ]
     },
     {
       "name": "CHRONIC",
       "file": "chronic.sql",
-      "params": [],
-      "description": "ทะเบียนโรคเรื้อรัง",
-      "type": [
-        "COLLECT"
-      ],
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/chronic"
+      "params": []
     },
     {
       "name": "OPD",
@@ -57,12 +46,7 @@
           "$2": "end_date",
           "description": "วันที่สิ้นสุด"
         }
-      ],
-      "description": "ข้อมูลรับบริการผู้ป่วยนอก",
-      "type": [
-        "SERVICE"
-      ],
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opd"
+      ]
     },
     {
       "name": "OPDX",
@@ -76,12 +60,7 @@
           "$2": "end_date",
           "description": "วันที่สิ้นสุด"
         }
-      ],
-      "description": "ข้อมูลหัตถการผู้ป่วยนอก",
-      "type": [
-        "SERVICE"
-      ],
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opdx"
+      ]
     },
     {
       "name": "OPOP",
@@ -95,12 +74,7 @@
           "$2": "end_date",
           "description": "วันที่สิ้นสุด"
         }
-      ],
-      "description": "ข้อมูลหัตถการผู้ป่วยนอก",
-      "type": [
-        "SERVICE"
-      ],
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opop"
+      ]
     },
     {
       "name": "IPD",
@@ -114,12 +88,7 @@
           "$2": "end_date",
           "description": "วันที่สิ้นสุด"
         }
-      ],
-      "description": "ข้อมูลผู้ป่วยนอก",
-      "type": [
-        "SERVICE"
-      ],
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipd"
+      ]
     },
     {
       "name": "IPDX",
@@ -133,12 +102,7 @@
           "$2": "end_date",
           "description": "วันที่สิ้นสุด"
         }
-      ],
-      "description": "ข้อมูลวินิจฉัยโรคผู้ป่วยใน",
-      "type": [
-        "SERVICE"
-      ],
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipdx"
+      ]
     },
     {
       "name": "IPOP",
@@ -152,12 +116,7 @@
           "$2": "end_date",
           "description": "วันที่สิ้นสุด"
         }
-      ],
-      "description": "ข้อมูลหัตถการผู้ป่วยใน",
-      "type": [
-        "SERVICE"
-      ],
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipop"
+      ]
     },
     {
       "name": "DRUG",
@@ -179,10 +138,7 @@
           "$4": "end_date",
           "description": "วันที่สิ้นสุด"
         }
-      ],
-      "description": "ข้อมูลยาและเวชภัณฑ์มิใช่ยา",
-      "type": "SERVICE",
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/drug"
+      ]
     },
     {
       "name": "LAB",
@@ -196,10 +152,7 @@
           "$2": "end_date",
           "description": "วันที่สิ้นสุด"
         }
-      ],
-      "description": "ข้อมูลผลตรวจทางห้องปฏิบัติการ",
-      "type": "SERVICE",
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/lab"
+      ]
     },
     {
       "name": "APPOINT",
@@ -213,10 +166,7 @@
           "$2": "end_date",
           "description": "วันที่สิ้นสุด"
         }
-      ],
-      "description": "ข้อมูลการนัด",
-      "type": "SERVICE",
-      "endpoint": "https://r7.moph.go.th/platform/api/v1/stdandard/appoint"
+      ]
     }
   ]
 }
