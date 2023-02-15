@@ -8,66 +8,49 @@
     {
       "name": "PERSON",
       "description": "ข้อมูลประชากรที่มารับบริการ",
-      "type": [
-        "SERVICE",
-        "COLLECT"
-      ],
+      "type": "กึ่งสำรวจ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/person"
     },
     {
       "name": "CHRONIC",
       "description": "ทะเบียนโรคเรื้อรัง",
-      "type": [
-        "COLLECT"
-      ],
+      "type": "สะสม",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/chronic"
     },
     {
       "name": "OPD",
       "description": "ข้อมูลรับบริการผู้ป่วยนอก",
-      "type": [
-        "SERVICE"
-      ],
+      "type": "บริการ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opd"
     },
     {
       "name": "OPDX",
       "description": "ข้อมูลหัตถการผู้ป่วยนอก",
-      "type": [
-        "SERVICE"
-      ],
+      "type": "บริการ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opdx"
     },
     {
       "name": "OPOP",
       "description": "ข้อมูลหัตถการผู้ป่วยนอก",
-      "type": [
-        "SERVICE"
-      ],
+      "type": "บริการ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/opop"
     },
     {
       "name": "IPD",
       "description": "ข้อมูลผู้ป่วยนอก",
-      "type": [
-        "SERVICE"
-      ],
+      "type": "บริการ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipd"
     },
     {
       "name": "IPDX",
       "description": "ข้อมูลวินิจฉัยโรคผู้ป่วยใน",
-      "type": [
-        "SERVICE"
-      ],
+      "type": "บริการ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipdx"
     },
     {
       "name": "IPOP",
       "description": "ข้อมูลหัตถการผู้ป่วยใน",
-      "type": [
-        "SERVICE"
-      ],
+      "type": "บริการ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/ipop"
     },
     {
