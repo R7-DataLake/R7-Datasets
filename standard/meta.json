@@ -14,7 +14,7 @@
     {
       "name": "CHRONIC",
       "description": "ทะเบียนโรคเรื้อรัง",
-      "type": "สะสม",
+      "type": "สำรวจ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/chronic"
     },
     {
