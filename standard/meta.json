@@ -1,16 +1,11 @@
 {
-  "name": "ชุดข้อมูลมาตรฐานสำหรับ R7 Platform",
-  "info": [
-    {
-      "id": 1,
-      "name": "ชุดข้อมูลมาตรฐานเขตสุขภาพที่ 7",
-      "description": "มาตรฐานข้อมูลเขตสุขภาพที่ 7",
-      "version": "1.0.0",
-      "updated": "2023-02-11",
-      "his": [
-        "HOSxP version 3",
-        "HOSxP version 4 (MySQL)"
-      ]
-    }
+  "code": "R7STANDARD",
+  "name": "ชุดข้อมูลมาตรฐานเขตสุขภาพที่ 7",
+  "description": "มาตรฐานข้อมูลเขตสุขภาพที่ 7",
+  "version": "1.0.0",
+  "updated": "2023-02-11",
+  "his": [
+    "HOSxP version 3",
+    "HOSxP version 4 (MySQL)"
   ]
 }
