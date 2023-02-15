@@ -1,6 +1,6 @@
 {
   "name": "ชุดข้อมูลมาตรฐานสำหรับ R7 Platform",
-  "dataset": [
+  "info": [
     {
       "id": 1,
       "name": "ชุดข้อมูลมาตรฐานเขตสุขภาพที่ 7",
@@ -10,8 +10,7 @@
       "his": [
         "HOSxP version 3",
         "HOSxP version 4 (MySQL)"
-      ],
-      "path": "./standard"
+      ]
     }
   ]
 }
