@@ -56,19 +56,19 @@
     {
       "name": "DRUG",
       "description": "ข้อมูลยาและเวชภัณฑ์มิใช่ยา",
-      "type": "SERVICE",
+      "type": "บริการ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/drug"
     },
     {
       "name": "LAB",
       "description": "ข้อมูลผลตรวจทางห้องปฏิบัติการ",
-      "type": "SERVICE",
+      "type": "บริการ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/standard/lab"
     },
     {
       "name": "APPOINT",
       "description": "ข้อมูลการนัด",
-      "type": "SERVICE",
+      "type": "บริการ",
       "endpoint": "https://r7.moph.go.th/platform/api/v1/stdandard/appoint"
     }
   ]
