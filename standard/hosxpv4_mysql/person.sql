@@ -32,7 +32,7 @@ WHERE
       ovst AS o
     WHERE
       o.hn = p.hn
-      AND o.vstdate BETWEEN #{start_date} AND #{end_date}
+      AND o.vstdate BETWEEN '#{start_date}' AND '#{end_date}'
       AND 
       EXISTS (
         SELECT
@@ -50,5 +50,5 @@ WHERE
       ipt AS i
     WHERE
       i.hn = p.hn
-      AND i.dchdate BETWEEN #{start_date} AND #{end_date}
+      AND i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
   );
