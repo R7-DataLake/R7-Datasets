@@ -6,7 +6,7 @@ SELECT
       opdconfig
     LIMIT 1
   ) AS HOSPCODE,
-  p.fname, p.lname, p.hn, p.cid, p.sex, p.birthday
+  p.fname, p.lname, p.hn, p.cid, p.sex, p.birthday, p.citizenship, p.amppart, p.chwpart, p.occupation, p.firstday
 FROM
   patient AS p
 WHERE
