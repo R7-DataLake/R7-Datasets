@@ -5,16 +5,16 @@ SELECT
     FROM
       opdconfig
     LIMIT 1
-  ) AS HOSPCODE,
-  a.hn AS HN,
-  a.an AS AN,
-  a.vn AS SEQ,
-  DATE_FORMAT(a.nextdate, '%Y%m%d') AS APPOINT_DATE,
-  DATE_FORMAT(a.nexttime, '%H%i') AS APPOINT_TIME,
-  a.clinic AS CLINIC,
-  a.note AS REMARK,
-  DATE_FORMAT(now(), '%Y%m%d%H%i%s') AS D_UPDATE
+  ) as 'HOSPCODE',
+  a.hn as 'HN',
+  a.an as 'AN',
+  a.vn as 'SEQ',
+  DATE_FORMAT(a.nextdate, '%Y%m%d') as 'APPOINT_DATE',
+  DATE_FORMAT(a.nexttime, '%H%i') as 'APPOINT_TIME',
+  a.clinic as 'CLINIC',
+  a.note as 'REMARK',
+  DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM
-  oapp AS a
+  oapp as a
 WHERE
-  a.vstdate BETWEEN $1 AND $2;
+  a.vstdate BETWEEN '#{start_date}' AND '#{end_date}';

@@ -5,16 +5,16 @@ SELECT
     FROM
       opdconfig
     LIMIT 1
-  ) AS HOSPCODE,
-  od.hn AS HN,
-  od.vn AS SEQ,
-  DATE_FORMAT(od.vstdate, '%Y%m%d') AS DATEDX,
-  od.icd10 AS DIAG,
-  od.diagtype AS DXTYPE,
-  od.doctor AS PROVIDER,
-  DATE_FORMAT(now(), '%Y%m%d%H%i%s') as D_UPDATE
+  ) as 'HOSPCODE',
+  od.hn as 'HN',
+  od.vn as 'SEQ',
+  DATE_FORMAT(od.vstdate, '%Y%m%d') as 'DATEDX',
+  od.icd10 as 'DIAG',
+  od.diagtype as 'DXTYPE',
+  od.doctor as 'PROVIDER',
+  DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM
-  ovstdiag AS od
+  ovstdiag as od
 WHERE
   EXISTS (
     SELECT
@@ -30,4 +30,4 @@ WHERE
   ) NOT IN (
     '1', '2', '3', '4', '5', '6', '7', '8', '9'
   )
-  AND od.vstdate BETWEEN $1 AND $2;
+  AND od.vstdate BETWEEN '#{start_date}' AND '#{end_date}';

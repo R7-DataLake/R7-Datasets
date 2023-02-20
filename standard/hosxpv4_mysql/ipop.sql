@@ -5,22 +5,22 @@ SELECT
     FROM
       opdconfig
     LIMIT 1
-  ) AS HOSPCODE,
-  i.hn AS HN,
-  i.an AS AN,
-  do.icd9 AS OPER,
-  od.diagtype AS OPTYPE,
-  do.doctor AS PROVIDER,
-  DATE_FORMAT(do.begin_date_time, '%Y%m%d') AS DATEIN,
-  DATE_FORMAT(do.begin_date_time, '%H%i%s') AS TIMEIN,
-  DATE_FORMAT(do.end_date_time, '%Y%m%d') AS DATEOUT,
-  DATE_FORMAT(do.end_date_time, '%H%i%s') AS TIMEOUT,
-  DATE_FORMAT(now(), '%Y%m%d%H%i%s') AS D_UPDATE
+  ) as 'HOSPCODE',
+  i.hn as 'HN',
+  i.an as 'AN',
+  do.icd9 as 'OPER',
+  od.diagtype as 'OPTYPE',
+  do.doctor as PROVIDER,
+  DATE_FORMAT(do.begin_date_time, '%Y%m%d') as 'DATEIN',
+  DATE_FORMAT(do.begin_date_time, '%H%i%s') as 'TIMEIN',
+  DATE_FORMAT(do.end_date_time, '%Y%m%d') as 'DATEOUT',
+  DATE_FORMAT(do.end_date_time, '%H%i%s') as 'TIMEOUT',
+  DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM
-  doctor_operation AS do
-INNER JOIN ipt AS i ON
+  doctor_operation as do
+INNER JOIN ipt as i ON
   i.vn = do.vn
-INNER JOIN ovstdiag AS od ON
+INNER JOIN ovstdiag as od ON
   od.ovst_diag_id = do.ovst_diag_id
 WHERE
-  i.dchdate BETWEEN $1 AND $2;
+  i.dchdate BETWEEN '#{start_date}' AND '#{end_date}';

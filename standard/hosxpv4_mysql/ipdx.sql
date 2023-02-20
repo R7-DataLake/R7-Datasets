@@ -5,16 +5,16 @@ SELECT
     FROM
       opdconfig
     LIMIT 1
-  ) AS HOSPCODE,
-  i.hn AS HN,
-  idx.an AS AN,
-  idx.icd10 AS DIAG,
-  idx.diagtype AS DXTYPE,
-  idx.doctor AS PROVIDER,
-  DATE_FORMAT(now(), '%Y%m%d%H%i%s') AS D_UPDATE
+  ) as 'HOSPCODE',
+  i.hn as 'HN',
+  idx.an as 'AN',
+  idx.icd10 as 'DIAG',
+  idx.diagtype as 'DXTYPE',
+  idx.doctor as PROVIDER,
+  DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM
-  iptdiag AS idx
-INNER JOIN ipt AS i ON
+  iptdiag as idx
+INNER JOIN ipt as i ON
   i.an = idx.an
 WHERE
-  i.dchdate BETWEEN $1 AND $2;
+  i.dchdate BETWEEN '#{start_date}' AND '#{end_date}';
