@@ -6,8 +6,7 @@ SELECT
       opdconfig
     LIMIT 1
   ) AS HOSPCODE,
-  p.*,
-  DATE_FORMAT(now(), '%Y%m%d%H%i%s') AS D_UPDATE
+  p.fname, p.lname, p.hn, p.cid, p.sex, p.birthday
 FROM
   patient AS p
 WHERE
