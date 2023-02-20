@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
   "his": {
-    "code": "hosxpv4_mysql",
-    "name": "HOSxP Version 4 (MySQL)"
+    "code": "hosxpv3",
+    "name": "HOSxP Version 3"
   },
   "database": "mysql",
   "dataset": [
