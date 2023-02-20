@@ -5,8 +5,15 @@ SELECT
     FROM
       opdconfig
     LIMIT 1
-  ) AS HOSPCODE,
-  p.fname, p.lname, p.hn, p.cid, p.sex, DATE_FORMAT(p.birthday, "%Y%m%d") as BIRTH, p.citizenship, p.amppart, p.chwpart, p.occupation, p.firstday
+  ) as 'HOSPCODE',
+  p.hn as 'HN',
+  p.cid as 'CID',
+  p.pname as 'TITLE',
+  p.fname as 'FNAME',
+  p.lname as 'LNAME',
+  p.sex as 'SEX', DATE_FORMAT(p.birthday, "%Y%m%d") as 'BIRTH', p.citizenship, p.chwpart as 'CHANGWAT',
+  p.amppart as 'AMPHUR',
+  p.tmbpart as 'TAMBOL', p.occupation, p.firstday
 FROM
   patient AS p
 WHERE
