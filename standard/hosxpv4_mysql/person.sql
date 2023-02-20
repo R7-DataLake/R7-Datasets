@@ -12,9 +12,9 @@ SELECT
   p.fname AS FNAME,
   p.lname AS LNAME,
   DATE_FORMAT(p.birthday, '%Y%m%d') AS BIRTH,
-  p.SEX,
+  p.sex AS SEX,
   p.marrystatus AS MARRIAGE,
-  p.OCCUPATION,
+  p.occupation AS OCCUPATION,
   p.nationality AS NATION,
   '1' AS IDTYPE,
   p.chwpart AS CHANGWAT,
@@ -51,4 +51,5 @@ WHERE
     WHERE
       i.hn = p.hn
       AND i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
-  );
+  )
+  GROUP BY p.hn, p.cid;
