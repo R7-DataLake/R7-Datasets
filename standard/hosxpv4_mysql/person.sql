@@ -6,21 +6,7 @@ SELECT
       opdconfig
     LIMIT 1
   ) AS HOSPCODE,
-  p.hn AS HN,
-  p.cid AS CID,
-  p.pname AS TITLE,
-  p.fname AS FNAME,
-  p.lname AS LNAME,
-  DATE_FORMAT(p.birthday, '%Y%m%d') AS BIRTH,
-  p.sex AS SEX,
-  p.marrystatus AS MARRIAGE,
-  p.occupation AS OCCUPATION,
-  p.nationality AS NATION,
-  '1' AS IDTYPE,
-  p.chwpart AS CHANGWAT,
-  p.amppart AS AMPHUR,
-  p.tmbpart AS TAMBOL,
-  p.type_area AS TYPEAREA,
+  p.*,
   DATE_FORMAT(now(), '%Y%m%d%H%i%s') AS D_UPDATE
 FROM
   patient AS p
