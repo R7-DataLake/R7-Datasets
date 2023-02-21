@@ -1,7 +1,7 @@
 {
   "code": "R7STANDARD_SERVICES",
   "name": "R7-ข้อมูลบริการ",
-  "description": "มาตรฐานข้อมูลเขตสุขภาพที่ 7",
+  "description": "มาตรฐานข้อมูลบริการเขตสุขภาพที่ 7",
   "version": "1.0.1",
   "updated": "2023-02-21",
   "baseUrl": "https://r7.moph.go.th/platform/api/standard/v1",
