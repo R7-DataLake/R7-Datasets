@@ -1,26 +1,30 @@
-SELECT 
+select 
   (
-    SELECT
+    select
       hospitalcode
-    FROM
+    from
       opdconfig
-    LIMIT 1
+    limit 1
   ) as 'HOSPCODE',
   i.hn as 'HN',
   i.an as 'AN',
-  do.icd9 as 'OPER',
+  od.icd10 as 'OPER',
   od.diagtype as 'OPTYPE',
-  do.doctor as PROVIDER,
-  DATE_FORMAT(do.begin_date_time, '%Y%m%d') as 'DATEIN',
-  DATE_FORMAT(do.begin_date_time, '%H%i%s') as 'TIMEIN',
-  DATE_FORMAT(do.end_date_time, '%Y%m%d') as 'DATEOUT',
-  DATE_FORMAT(do.end_date_time, '%H%i%s') as 'TIMEOUT',
+  od.doctor as 'PROVIDER',
+  '' as 'DATEIN',
+  '' as 'TIMEIN',
+  '' as 'DATEOUT',
+  '' as 'TIMEOUT',
   DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
-FROM
-  doctor_operation as do
-INNER JOIN ipt as i ON
-  i.vn = do.vn
-INNER JOIN ovstdiag as od ON
-  od.ovst_diag_id = do.ovst_diag_id
-WHERE
-  i.dchdate BETWEEN '#{start_date}' AND '#{end_date}';
+from
+  ovstdiag as od
+inner join ipt as i on
+  i.vn = od.vn
+where
+  i.dchdate between '#{start_date}' AND '#{end_date}'
+  and left(
+        od.icd10,
+        1
+  ) in (
+        '1', '2', '3', '4', '5', '6', '7', '8', '9'
+  );

@@ -10,7 +10,7 @@ SELECT
   i.an as 'AN',
   do.icd9 as 'OPER',
   od.diagtype as 'OPTYPE',
-  do.doctor as PROVIDER,
+  do.doctor as 'PROVIDER',
   DATE_FORMAT(do.begin_date_time, '%Y%m%d') as 'DATEIN',
   DATE_FORMAT(do.begin_date_time, '%H%i%s') as 'TIMEIN',
   DATE_FORMAT(do.end_date_time, '%Y%m%d') as 'DATEOUT',
