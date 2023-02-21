@@ -1,0 +1,22 @@
+{
+  "code": "R7STANDARD_COLLECT",
+  "name": "R7-ข้อมูลแฟ้มสะสม",
+  "description": "มาตรฐานแฟ้มข้อมูลสะสมเขตสุขภาพที่ 7",
+  "version": "1.0.0",
+  "updated": "2023-02-21",
+  "baseUrl": "https://r7.moph.go.th/platform/api/standard/v1",
+  "dataset": [
+    {
+      "name": "PERSON",
+      "description": "ข้อมูลประชากรที่มารับบริการ",
+      "type": "สำรวจ",
+      "endpoint": "/person"
+    },
+    {
+      "name": "CHRONIC",
+      "description": "ทะเบียนโรคเรื้อรัง",
+      "type": "สำรวจ",
+      "endpoint": "/chronic"
+    }
+  ]
+}
