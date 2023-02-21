@@ -30,11 +30,6 @@
       ]
     },
     {
-      "name": "CHRONIC",
-      "file": "chronic.sql",
-      "params": []
-    },
-    {
       "name": "OPD",
       "file": "opd.sql",
       "params": [
