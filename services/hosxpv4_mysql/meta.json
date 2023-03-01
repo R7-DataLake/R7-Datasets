@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "updated": "2023-02-21",
   "his": {
     "code": "hosxpv4_mysql",
-    "name": "HOSxP Version 4 (MySQL)"
+    "name": "HOSxP Version 4"
   },
   "database": "mysql",
-  "sql_dir": "hosxpv4_mysql",
   "dataset": [
     {
       "name": "PERSON",
@@ -28,11 +28,6 @@
           "description": "วันที่สิ้นสุด"
         }
       ]
-    },
-    {
-      "name": "CHRONIC",
-      "file": "chronic.sql",
-      "params": []
     },
     {
       "name": "OPD",

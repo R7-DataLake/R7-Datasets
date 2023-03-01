@@ -1,9 +1,9 @@
 SELECT c.hn as 'HN',
-c.dx_date as 'DATE_DIAG',
+DATE_FORMAT(c.dx_date, "%Y%m%d") as 'DATE_DIAG',
 cl.icd10 as 'CHRONIC',
 c.dx_hospcode as 'HOSP_DX',
 '' as 'HOSP_RX',
-c.dchdate as 'DATE_DISCH',
+DATE_FORMAT(c.dchdate, "%Y%m%d") as 'DATE_DISCH',
 DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM clinicmember as c 
 INNER JOIN clinic as cl ON cl.clinic=c.clinic
