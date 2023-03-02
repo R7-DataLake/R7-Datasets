@@ -1,6 +1,14 @@
 {
   "platforms": [
-  {"code": "R7PLATFORM","name": "R7 Platform", "endpoint": "https://r7.moph.go.th/platform/request/login"},
-  {"code": "R7PLATFORM_TEST","name": "R7 Platform (Test)", "endpoint": "http://localhost:3001/login"}
-]
+    {
+      "code": "R7PLATFORM",
+      "name": "R7 Platform",
+      "endpoint": "https://r7.moph.go.th/platform/request/login"
+    },
+    {
+      "code": "R7PLATFORM_TEST",
+      "name": "R7 Platform (Test)",
+      "endpoint": "http://localhost:3001/login"
+    }
+  ]
 }

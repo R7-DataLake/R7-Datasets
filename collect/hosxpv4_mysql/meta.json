@@ -3,7 +3,8 @@
   "updated": "2023-02-21",
   "his": {
     "code": "hosxpv4_mysql",
-    "name": "HOSxP Version 4"
+    "name": "HOSxP Version 4",
+    "id": "ee811bb0-f0df-4f2e-9194-1b172e5121f6"
   },
   "database": "mysql",
   "dataset": [
