@@ -24,16 +24,16 @@ SELECT
   p.type_area as 'TYPEAREA',
   DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM
-  patient AS p
+  patient as p
 WHERE
   EXISTS (
     SELECT
       hn
     FROM
-      ovst AS o
+      ovst as o
     WHERE
       o.hn = p.hn
-      AND length(p.type_area) > 0
+      AND LENGTH(p.type_area) > 0
       AND o.vstdate BETWEEN '#{start_date}' AND '#{end_date}'
       AND 
       EXISTS (
@@ -49,7 +49,7 @@ WHERE
     SELECT
       i.hn
     FROM
-      ipt AS i
+      ipt as i
     WHERE
       i.hn = p.hn
       AND length(p.type_area) > 0 
