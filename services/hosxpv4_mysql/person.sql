@@ -8,6 +8,7 @@ SELECT
   ) as 'HOSPCODE',
   p.hn as 'HN',
   p.cid as 'CID',
+  '1' as 'IDTYPE',
   p.pname as 'TITLE',
   p.fname as 'FNAME',
   p.lname as 'LNAME',
