@@ -19,8 +19,9 @@ SELECT
   p.chwpart as 'CHANGWAT',
   p.amppart as 'AMPHUR',
   p.tmbpart as 'TAMBOL', 
-   p.type_area as 'TYPEAREA',
-   DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
+  p.moopart as 'MOO',
+  p.type_area as 'TYPEAREA',
+  DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM
   patient AS p
   GROUP BY p.hn, p.cid;
