@@ -32,6 +32,7 @@ WHERE
       ovst AS o
     WHERE
       o.hn = p.hn
+      AND length(p.type_area) > 0
       AND o.vstdate BETWEEN '#{start_date}' AND '#{end_date}'
       AND 
       EXISTS (
@@ -50,6 +51,7 @@ WHERE
       ipt AS i
     WHERE
       i.hn = p.hn
+      AND length(p.type_area) > 0 
       AND i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
   )
   GROUP BY p.hn, p.cid;
