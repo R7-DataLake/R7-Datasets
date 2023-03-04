@@ -8,6 +8,7 @@ SELECT
   ) as 'HOSPCODE',
   p.hn as 'HN',
   p.cid as 'CID',
+  '1' as 'IDTYPE',
   p.pname as 'TITLE',
   p.fname as 'FNAME',
   p.lname as 'LNAME',
@@ -24,4 +25,5 @@ SELECT
   DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM
   patient AS p
+  WHERE LENGTH(p.type_area) > 0
   GROUP BY p.hn, p.cid;
