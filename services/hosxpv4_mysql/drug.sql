@@ -31,6 +31,7 @@ FROM
 INNER JOIN ipt AS ip ON
   ip.an = opi.an
   AND ip.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
+GROUP BY opi.hn, opi.vn, opi.icode
 UNION 
 SELECT
   (
@@ -78,4 +79,5 @@ INNER JOIN ovst as o ON
       ) NOT IN (
         '1', '2', '3', '4', '5', '6', '7', '8', '9'
       )
-  );
+  )
+  GROUP BY opi.hn, opi.vn, opi.icode;
