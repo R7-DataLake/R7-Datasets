@@ -19,4 +19,5 @@ INNER JOIN ovst as o ON
   o.vn = do.vn
 WHERE
   o.vstdate BETWEEN '#{start_date}' AND '#{end_date}'
-  AND LENGTH(do.icd9) > 0;
+  AND LENGTH(do.icd9) > 0
+GROUP BY o.hn,o.vn,do.icd9;
