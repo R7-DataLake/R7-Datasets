@@ -3,7 +3,7 @@
     {
       "code": "R7PLATFORM",
       "name": "R7 Platform",
-      "endpoint": "https://r7.moph.go.th/platform/request/login"
+      "endpoint": "https://r7.moph.go.th/platform/auth/login"
     },
     {
       "code": "R7PLATFORM_TEST",
