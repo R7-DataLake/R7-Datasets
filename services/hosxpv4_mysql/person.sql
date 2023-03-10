@@ -33,7 +33,7 @@ WHERE
       ovst as o
     WHERE
       o.hn = p.hn
-      AND length(p.type_area) > 0 AND LENGTH(p.cid) = 13 AND LENGTH(p.fname) > 0
+      AND length(p.birthday) > 0 AND length(p.type_area) > 0 AND LENGTH(p.cid) = 13 AND LENGTH(p.fname) > 0
       AND o.vstdate BETWEEN '#{start_date}' AND '#{end_date}'
       AND 
       EXISTS (
@@ -52,7 +52,7 @@ WHERE
       ipt as i
     WHERE
       i.hn = p.hn
-      AND length(p.type_area) > 0 AND LENGTH(p.cid) = 13 AND LENGTH(p.fname) > 0
+      AND length(p.birthday) > 0 AND length(p.type_area) > 0 AND LENGTH(p.cid) = 13 AND LENGTH(p.fname) > 0
       AND i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
   )
   GROUP BY p.hn, p.cid;
