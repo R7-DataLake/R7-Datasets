@@ -19,4 +19,5 @@ SELECT
   i.bw as 'ADM_W',
   DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM ipt as i 
-WHERE i.dchdate BETWEEN '#{start_date}' AND '#{end_date}';
+WHERE i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
+GROUP BY i.hn, i.an;

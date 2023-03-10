@@ -45,4 +45,5 @@ WHERE
         '1', '2', '3', '4', '5', '6', '7', '8', '9'
       )
       AND LENGTH(od.icd10) > 0
-  );
+  )
+GROUP BY o.hn, o.vstdate, o.vn;;

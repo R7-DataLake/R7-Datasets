@@ -21,4 +21,5 @@ SELECT
 FROM ipt as i 
 INNER JOIN dchstts as ds ON ds.dchstts=i.dchstts
 INNER JOIN dchtype as dt ON dt.dchtype=i.dchtype
-WHERE i.dchdate BETWEEN '#{start_date}' AND '#{end_date}';
+WHERE i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
+GROUP BY i.hn, i.an;

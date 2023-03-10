@@ -17,4 +17,5 @@ FROM
 INNER JOIN ipt as i ON
   i.an = idx.an
 WHERE
-  i.dchdate BETWEEN '#{start_date}' AND '#{end_date}';
+  i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
+GROUP BY i.hn, i.an, idx.icd10;

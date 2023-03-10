@@ -23,4 +23,5 @@ INNER JOIN ipt as i ON
 INNER JOIN ovstdiag as od ON
   od.ovst_diag_id = do.ovst_diag_id
 WHERE
-  i.dchdate BETWEEN '#{start_date}' AND '#{end_date}';
+  i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
+GROUP BY i.hn, i.an, do.icd9;
