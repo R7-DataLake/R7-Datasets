@@ -16,7 +16,7 @@ SELECT
     SELECT
       d.units
     FROM
-      drugitems d
+      drugitems AS d
     WHERE
       d.icode = opi.icode
     LIMIT 1
@@ -24,9 +24,9 @@ SELECT
   '' AS 'UNIT_PACK',
   opi.drugusage AS 'SIGCODE',
   opi.doctor AS PROVIDER,
-  DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
+  DATE_FORMAT(now(), '%Y%m%d%H%i%s') AS 'D_UPDATE'
 FROM
   opitemrece AS opi
 INNER JOIN ipt AS ip ON ip.an = opi.an
   AND ip.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
-GROUP BY opi.hn, iop.an, opi.icode;
+GROUP BY opi.hn, opi.an, opi.icode;
