@@ -9,7 +9,7 @@ SELECT
   opi.hn as 'HN',
   opi.vn as 'SEQ',
   opi.icode as 'DID',
-  CAST(SUM(opi.qty) as unsigned) as 'AMOUNT',
+  CAST(SUM(opi.qty) as char) as 'AMOUNT',
   opi.unitprice as 'DRUGPRICE',
   opi.cost as 'DRUGCOST',
   (
