@@ -9,7 +9,7 @@ SELECT
   opi.hn as 'HN',
   opi.vn as 'SEQ',
   opi.icode as 'DID',
-  SUM(opi.qty) as 'AMOUNT',
+  FLOOR(SUM(opi.qty)) as 'AMOUNT',
   opi.unitprice as 'DRUGPRICE',
   opi.cost as 'DRUGCOST',
   (
