@@ -50,16 +50,16 @@
       "endpoint": "/ipop"
     },
     {
-      "name": "OPDDRUG",
+      "name": "OPDRUG",
       "description": "ข้อมูลยาและเวชภัณฑ์มิใช่ยาผู้ป่วยนอก",
       "type": "บริการ",
-      "endpoint": "/opddrug"
+      "endpoint": "/opdrug"
     },
     {
-      "name": "IPDDRUG",
+      "name": "IPDRUG",
       "description": "ข้อมูลยาและเวชภัณฑ์มิใช่ยาผู้ป่วยใน",
       "type": "บริการ",
-      "endpoint": "/ipddrug"
+      "endpoint": "/ipdrug"
     },
     {
       "name": "LAB",

@@ -116,7 +116,7 @@
     },
     {
       "name": "OPDRUG",
-      "file": "opddrug.sql",
+      "file": "opdrug.sql",
       "params": [
         {
           "$1": "start_date",
@@ -129,8 +129,8 @@
       ]
     },
     {
-      "name": "IPDDRUG",
-      "file": "ipddrug.sql",
+      "name": "IPDRUG",
+      "file": "ipdrug.sql",
       "params": [
         {
           "$1": "start_date",
