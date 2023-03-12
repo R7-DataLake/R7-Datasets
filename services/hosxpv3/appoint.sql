@@ -18,4 +18,5 @@ FROM
   oapp as a
 WHERE
   a.vstdate BETWEEN '#{start_date}' AND '#{end_date}'
+  AND LENGTH(a.nexttime) > 0
 GROUP BY a.hn, a.nextdate, a.clinic;
