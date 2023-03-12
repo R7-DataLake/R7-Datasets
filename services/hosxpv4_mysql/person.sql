@@ -9,9 +9,9 @@ SELECT
   p.hn as 'HN',
   p.cid as 'CID',
   '1' as 'IDTYPE',
-  p.pname as 'TITLE',
-  p.fname as 'FNAME',
-  p.lname as 'LNAME',
+  TRIM(p.pname) as 'TITLE',
+  TRIM(p.fname) as 'FNAME',
+  TRIM(p.lname) as 'LNAME',
   p.sex as 'SEX', 
   DATE_FORMAT(p.birthday, "%Y%m%d") as 'BIRTH', 
   p.marrystatus as 'MARRIAGE',
@@ -33,7 +33,7 @@ WHERE
       ovst as o
     WHERE
       o.hn = p.hn
-      AND length(p.birthday) > 0 AND length(p.type_area) > 0 AND LENGTH(p.cid) = 13 AND LENGTH(p.fname) > 0
+      AND length(p.birthday) > 0 AND length(TRIM(p.type_area)) > 0 AND LENGTH(TRIM(p.cid)) = 13 AND LENGTH(TRIM(p.fname)) > 0
       AND o.vstdate BETWEEN '#{start_date}' AND '#{end_date}'
       AND 
       EXISTS (
@@ -52,7 +52,7 @@ WHERE
       ipt as i
     WHERE
       i.hn = p.hn
-      AND length(p.birthday) > 0 AND length(p.type_area) > 0 AND LENGTH(p.cid) = 13 AND LENGTH(p.fname) > 0
+      AND length(p.birthday) > 0 AND length(TRIM(p.type_area)) > 0 AND LENGTH(TRIM(p.cid)) = 13 AND LENGTH(TRIM(p.fname)) > 0
       AND i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
   )
   GROUP BY p.hn, p.cid;

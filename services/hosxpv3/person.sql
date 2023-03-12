@@ -8,9 +8,9 @@ SELECT
   ) as 'HOSPCODE',
   p.hn as 'HN',
   p.cid as 'CID',
-  p.pname as 'TITLE',
-  p.fname as 'FNAME',
-  p.lname as 'LNAME',
+  TRIM(p.pname) as 'TITLE',
+  TRIM(p.fname) as 'FNAME',
+  TRIM(p.lname) as 'LNAME',
   p.sex as 'SEX', 
   DATE_FORMAT(p.birthday, "%Y%m%d") as 'BIRTH', 
   p.marrystatus as 'MARRIAGE',
@@ -19,8 +19,8 @@ SELECT
   p.amppart as 'AMPHUR',
   p.tmbpart as 'TAMBOL', 
   p.occupation as 'OCCUPATION',
-   p.type_area as 'TYPEAREA',
-   DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
+  p.type_area as 'TYPEAREA',
+  DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM
   patient AS p
 WHERE
@@ -31,7 +31,7 @@ WHERE
       ovst AS o
     WHERE
       o.hn = p.hn
-      AND LENGTH(p.birthday) > 0 AND length(p.type_area) > 0 AND LENGTH(p.cid) = 13 AND LENGTH(p.fname) > 0
+      AND LENGTH(p.birthday) > 0 AND length(TRIM(p.type_area)) > 0 AND LENGTH(TRIM(p.cid)) = 13 AND LENGTH(TRIM(p.fname)) > 0
       AND o.vstdate BETWEEN '#{start_date}' AND '#{end_date}'
       AND 
       EXISTS (
@@ -50,8 +50,8 @@ WHERE
       ipt AS i
     WHERE
       i.hn = p.hn
-      AND length(p.type_area) > 0 AND LENGTH(p.cid) = 13 AND LENGTH(p.fname) > 0
+      AND length(p.type_area) > 0 AND LENGTH(TRIM(p.cid)) = 13 AND LENGTH(TRIM(p.fname)) > 0
       AND i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
   )
-  AND LENGTH(p.birthday) > 0 AND LENGTH(p.type_area) > 0 AND LENGTH(p.cid) = 13 AND LENGTH(p.fname) > 0
+  AND LENGTH(p.birthday) > 0 AND LENGTH(TRIM(p.type_area)) > 0 AND LENGTH(TRIM(p.cid)) = 13 AND LENGTH(TRIM(p.fname)) > 0
   GROUP BY p.hn, p.cid;
