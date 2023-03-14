@@ -1,0 +1,174 @@
+{
+  "version": "1.0.3",
+  "updated": "2023-03-10",
+  "his": {
+    "code": "hosxpv3",
+    "name": "HOSxP Version 3",
+    "id": "5d6ad7cf-9bf0-4644-84e8-bce5c47ea8f1"
+  },
+  "database": "mysql",
+  "dataset": [
+    {
+      "name": "PERSON",
+      "file": "person.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        },
+        {
+          "$3": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$4": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    },
+    {
+      "name": "OPD",
+      "file": "opd.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    },
+    {
+      "name": "OPDX",
+      "file": "opdx.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    },
+    {
+      "name": "OPOP",
+      "file": "opop.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    },
+    {
+      "name": "IPD",
+      "file": "ipd.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    },
+    {
+      "name": "IPDX",
+      "file": "ipdx.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    },
+    {
+      "name": "IPOP",
+      "file": "ipop.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    },
+    {
+      "name": "OPDRUG",
+      "file": "opdrug.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    },
+    {
+      "name": "IPDRUG",
+      "file": "ipdrug.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    },
+    {
+      "name": "LAB",
+      "file": "lab.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    },
+    {
+      "name": "APPOINT",
+      "file": "appoint.sql",
+      "params": [
+        {
+          "$1": "start_date",
+          "description": "วันที่เริ่มต้น"
+        },
+        {
+          "$2": "end_date",
+          "description": "วันที่สิ้นสุด"
+        }
+      ]
+    }
+  ]
+}

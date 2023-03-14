@@ -8,6 +8,11 @@
     {
       "code": "R7PLATFORM_TEST",
       "name": "R7 Platform (Test)",
+      "endpoint": "https://r7.moph.go.th/platform/test/auth/request"
+    },
+    {
+      "code": "R7PLATFORM_Local",
+      "name": "R7 Platform (Local)",
       "endpoint": "http://localhost:3001/request"
     }
   ]
