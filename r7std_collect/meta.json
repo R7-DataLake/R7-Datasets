@@ -4,8 +4,7 @@
   "description": "มาตรฐานแฟ้มข้อมูลสะสมเขตสุขภาพที่ 7",
   "version": "1.0.0",
   "updated": "2023-02-21",
-  "baseUrl1": "https://r7.moph.go.th/platform/api/standard/v1",
-  "baseUrl": "http://localhost:3000",
+  "baseUrl": "https://r7.moph.go.th/platform/api/standard/v1",
   "dataset": [
     {
       "name": "PERSON",
