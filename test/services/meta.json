@@ -1,0 +1,76 @@
+{
+  "code": "R7STANDARD_SERVICES_TEST",
+  "name": "R7-ข้อมูลบริการ (Test)",
+  "description": "มาตรฐานข้อมูลบริการเขตสุขภาพที่ 7 (สำหรับทดสอบ)",
+  "version": "1.0.3",
+  "updated": "2023-03-10",
+  "baseUrl": "https://r7.moph.go.th/platform/test/api/standard/v1",
+  "dataset": [
+    {
+      "name": "PERSON",
+      "description": "ข้อมูลประชากรที่มารับบริการ",
+      "type": "กึ่งสำรวจ",
+      "endpoint": "/person"
+    },
+    {
+      "name": "OPD",
+      "description": "ข้อมูลรับบริการผู้ป่วยนอก",
+      "type": "บริการ",
+      "endpoint": "/opd"
+    },
+    {
+      "name": "OPDX",
+      "description": "ข้อมูลวินิจฉัยโรคผู้ป่วยนอก",
+      "type": "บริการ",
+      "endpoint": "/opdx"
+    },
+    {
+      "name": "OPOP",
+      "description": "ข้อมูลหัตถการผู้ป่วยนอก",
+      "type": "บริการ",
+      "endpoint": "/opop"
+    },
+    {
+      "name": "IPD",
+      "description": "ข้อมูลผู้ป่วยนอก",
+      "type": "บริการ",
+      "endpoint": "/ipd"
+    },
+    {
+      "name": "IPDX",
+      "description": "ข้อมูลวินิจฉัยโรคผู้ป่วยใน",
+      "type": "บริการ",
+      "endpoint": "/ipdx"
+    },
+    {
+      "name": "IPOP",
+      "description": "ข้อมูลหัตถการผู้ป่วยใน",
+      "type": "บริการ",
+      "endpoint": "/ipop"
+    },
+    {
+      "name": "OPDRUG",
+      "description": "ข้อมูลยาและเวชภัณฑ์มิใช่ยาผู้ป่วยนอก",
+      "type": "บริการ",
+      "endpoint": "/opdrug"
+    },
+    {
+      "name": "IPDRUG",
+      "description": "ข้อมูลยาและเวชภัณฑ์มิใช่ยาผู้ป่วยใน",
+      "type": "บริการ",
+      "endpoint": "/ipdrug"
+    },
+    {
+      "name": "LAB",
+      "description": "ข้อมูลผลตรวจทางห้องปฏิบัติการ",
+      "type": "บริการ",
+      "endpoint": "/lab"
+    },
+    {
+      "name": "APPOINT",
+      "description": "ข้อมูลการนัด",
+      "type": "บริการ",
+      "endpoint": "/appoint"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "version": "1.0.1",
+  "updated": "2023-03-07",
+  "his": {
+    "code": "hosxpv3",
+    "name": "HOSxP version 3",
+    "id": "8a834094-c59a-4470-b102-912bfc409be7"
+  },
+  "database": "mysql",
+  "dataset": [
+    {
+      "name": "PERSON",
+      "file": "person.sql",
+      "params": []
+    },
+    {
+      "name": "CHRONIC",
+      "file": "chronic.sql",
+      "params": []
+    }
+  ]
+}
