@@ -48,4 +48,4 @@ WHERE
       )
       AND LENGTH(od.icd10) > 0
   )
-GROUP BY o.hn, o.vstdate, o.vn;
+GROUP BY o.hn, o.vstdate;
