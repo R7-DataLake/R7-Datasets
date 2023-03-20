@@ -17,6 +17,8 @@ SELECT
   os.bpd as 'DBP',
   os.pulse as 'PR',
   os.rr as 'RR',
+  os.height as 'HEIGHT',
+  os.bw as 'WEIGHT',
   o.ovstist as 'TYPEIN',
   o.ovstost as 'TYPEOUT',
   o.pttype as 'INS_TYPE',
