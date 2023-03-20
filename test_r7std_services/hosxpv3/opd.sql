@@ -17,6 +17,8 @@ SELECT
   os.bpd as 'DBP',
   os.pulse as 'PR',
   os.rr as 'RR',
+  os.height as 'HEIGHT',
+  os.bw as 'WEIGHT',
   o.ovstist as 'TYPEIN',
   o.ovstost as 'TYPEOUT',
   o.pttype as 'INS_TYPE',
@@ -46,4 +48,4 @@ WHERE
       )
       AND LENGTH(od.icd10) > 0
   )
-GROUP BY o.hn, o.vstdate, o.vn;;
+GROUP BY o.hn, o.vstdate;
