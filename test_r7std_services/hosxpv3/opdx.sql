@@ -31,4 +31,4 @@ WHERE
     '1', '2', '3', '4', '5', '6', '7', '8', '9'
   )
   AND od.vstdate BETWEEN '#{start_date}' AND '#{end_date}'
-GROUP BY od.hn, od.vn, od.icd10;;
+GROUP BY od.hn, od.vn, od.icd10;
