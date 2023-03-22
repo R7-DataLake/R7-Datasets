@@ -1,0 +1,8 @@
+{
+  "id": "f18fad2b-fd9c-4229-90c8-b16f7ca63f2c",
+  "name": "HOSxP Version 4",
+  "basePath": "hosxpv4_mysql",
+  "version": "1.0.4",
+  "database": "mysql",
+  "updated": "2023-03-10"
+}

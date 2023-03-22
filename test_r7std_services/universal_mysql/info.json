@@ -1,0 +1,8 @@
+{
+  "id": "f75b5b07-cc34-4bd9-98ba-552cb8f55121",
+  "name": "Universal (View)",
+  "version": "1.0.0",
+  "basePath": "universal_mysql",
+  "database": "mysql",
+  "updated": "2023-03-21"
+}
