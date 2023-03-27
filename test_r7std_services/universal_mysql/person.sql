@@ -12,6 +12,7 @@ SELECT
   p.changwat as 'CHANGWAT',
   p.amphur as 'AMPHUR',
   p.tambol as 'TAMBOL', 
+  p.moo as 'MOO',
   p.occupation as 'OCCUPATION',
   p.typearea as 'TYPEAREA',
   DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
