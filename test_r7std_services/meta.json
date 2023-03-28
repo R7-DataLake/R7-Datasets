@@ -72,5 +72,122 @@
       "type": "บริการ",
       "endpoint": "/appoint"
     }
+  ],
+  validators: [
+    "name": "PERSON",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "$id": "https://r7.moph.go.th/platform/dataset/std/person",
+      "description": "JSON Schema สำหรับตรวจสอบแฟ้ม PERSON",
+      "properties": {
+        "HOSPCODE": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 10
+        },
+        "HN": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "CID": {
+          "type": "string",
+          "maxLength": 13,
+          "minLength": 13
+        },
+        "TITLE": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "FNAME": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "LNAME": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "BIRTH": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 8
+        },
+        "SEX": {
+          "enum": [
+            "1",
+            "2"
+          ]
+        },
+        "MARRIAGE": {
+          "type": "string"
+        },
+        "OCCUPATION": {
+          "type": "string"
+        },
+        "NATION": {
+          "type": "string"
+        },
+        "IDTYPE": {
+          "enum": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "CHANGWAT": {
+          "type": "string",
+          "maxLength": 2,
+          "minLength": 2
+        },
+        "AMPHUR": {
+          "type": "string",
+          "maxLength": 2,
+          "minLength": 2
+        },
+        "TAMBOL": {
+          "type": "string",
+          "maxLength": 2
+        },
+        "MOO": {
+          "type": "string",
+          "maxLength": 3
+        },
+        "TYPEAREA": {
+          "enum": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "D_UPDATE": {
+          "type": "string",
+          "maxLength": 14,
+          "minLength": 14
+        }
+      },
+      "required": [
+        "HOSPCODE",
+        "HN",
+        "CID",
+        "TITLE",
+        "FNAME",
+        "LNAME",
+        "BIRTH",
+        "SEX",
+        "OCCUPATION",
+        "NATION",
+        "CHANGWAT",
+        "AMPHUR",
+        "TAMBOL",
+        "MOO",
+        "TYPEAREA",
+        "D_UPDATE"
+      ]
+    }
   ]
 }
