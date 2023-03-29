@@ -74,120 +74,850 @@
     }
   ],
   "validators": [
-    "name": "PERSON",
-    "schema": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "type": "object",
-      "$id": "https://r7.moph.go.th/platform/dataset/std/person",
-      "description": "JSON Schema สำหรับตรวจสอบแฟ้ม PERSON",
-      "properties": {
-        "HOSPCODE": {
-          "type": "string",
-          "minLength": 5,
-          "maxLength": 10
+    {
+      "name": "PERSON",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/person",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม PERSON",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "CID": {
+            "type": "string",
+            "maxLength": 13,
+            "minLength": 13
+          },
+          "TITLE": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "FNAME": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "LNAME": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "BIRTH": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 8
+          },
+          "SEX": {
+            "enum": [
+              "1",
+              "2"
+            ]
+          },
+          "MARRIAGE": {
+            "type": "string"
+          },
+          "OCCUPATION": {
+            "type": "string"
+          },
+          "NATION": {
+            "type": "string"
+          },
+          "IDTYPE": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ]
+          },
+          "CHANGWAT": {
+            "type": "string",
+            "maxLength": 2,
+            "minLength": 2
+          },
+          "AMPHUR": {
+            "type": "string",
+            "maxLength": 2,
+            "minLength": 2
+          },
+          "TAMBOL": {
+            "type": "string",
+            "maxLength": 2
+          },
+          "MOO": {
+            "type": "string",
+            "maxLength": 3
+          },
+          "TYPEAREA": {
+            "enum": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ]
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "HN": {
-          "type": "string",
-          "maxLength": 50
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "CID",
+          "TITLE",
+          "FNAME",
+          "LNAME",
+          "BIRTH",
+          "SEX",
+          "OCCUPATION",
+          "NATION",
+          "CHANGWAT",
+          "AMPHUR",
+          "TAMBOL",
+          "MOO",
+          "TYPEAREA",
+          "D_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "OPD",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/opd",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม OPD",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "CLINIC": {
+            "type": "string",
+            "maxLength": 10
+          },
+          "DATE_SERV": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 8
+          },
+          "TIME_SERV": {
+            "type": "string",
+            "maxLength": 6,
+            "minLength": 6
+          },
+          "SEQ": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "CHIEFCOMP": {
+            "type": "string",
+            "maxLength": 1024
+          },
+          "BTEMP": {
+            "type": "number",
+            "maximum": 999
+          },
+          "SBP": {
+            "type": "number",
+            "maximum": 999
+          },
+          "DBP": {
+            "type": "number",
+            "maximum": 999
+          },
+          "PR": {
+            "type": "number",
+            "maximum": 999
+          },
+          "RR": {
+            "type": "number",
+            "maximum": 999
+          },
+          "HEIGHT": {
+            "type": "number",
+            "maximum": 999
+          },
+          "WEIGHT": {
+            "type": "number",
+            "maximum": 999
+          },
+          "TYPEIN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "TYPEOUT": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "INS_TYPE": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "INS_NUMBER": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "INS_HOSPMAIN": {
+            "type": "string",
+            "maxLength": 10
+          },
+          "INS_HOSPSUB": {
+            "type": "string",
+            "maxLength": 10
+          },
+          "DIAG_TEXT": {
+            "type": "string",
+            "maxLength": 255
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "CID": {
-          "type": "string",
-          "maxLength": 13,
-          "minLength": 13
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "CLINIC",
+          "DATE_SERV",
+          "TIME_SERV",
+          "SEQ",
+          "CHIEFCOMP",
+          "TYPEIN",
+          "TYPEOUT",
+          "INS_TYPE",
+          "D_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "OPOP",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/opop",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม OPOP",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "SEQ": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "DATEOP": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 8
+          },
+          "OPER": {
+            "type": "string",
+            "maxLength": 7,
+            "minLength": 3
+          },
+          "SERVPRICE": {
+            "type": "number",
+            "maximum": 999999,
+            "default": 0
+          },
+          "PROVIDER": {
+            "type": "string",
+            "maxLength": 6
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "TITLE": {
-          "type": "string",
-          "maxLength": 30
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "SEQ",
+          "DATEOP",
+          "OPER",
+          "SERVPRICE",
+          "PROVIDER",
+          "D_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "OPDX",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/opdx",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม OPDX",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "SEQ": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "DATEDX": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 8
+          },
+          "DIAG": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 3
+          },
+          "DXTYPE": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ]
+          },
+          "PROVIDER": {
+            "type": "string",
+            "maxLength": 6
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "FNAME": {
-          "type": "string",
-          "maxLength": 100
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "SEQ",
+          "DATEDX",
+          "DIAG",
+          "DXTYPE",
+          "PROVIDER",
+          "D_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "OPDRUG",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/opdrug",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม OPDRUG",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "SEQ": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "DID": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "AMOUNT": {
+            "type": "number",
+            "maximum": 999999,
+            "default": 0
+          },
+          "DRUGPRICE": {
+            "type": "number",
+            "maximum": 999999,
+            "default": 0
+          },
+          "DRUGCOST": {
+            "type": "number",
+            "maximum": 999999,
+            "default": 0
+          },
+          "UNIT": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "UNIT_PACK": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "SIGCODE": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "PROVIDER": {
+            "type": "string",
+            "maxLength": 6
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "LNAME": {
-          "type": "string",
-          "maxLength": 100
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "SEQ",
+          "DID",
+          "AMOUNT",
+          "DRUGPRICE",
+          "DRUGCOST",
+          "UNIT",
+          "SIGCODE",
+          "D_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "LAB",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/lab",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม LAB",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "SEQ": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "LABTEST": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "LABRESULT": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "BIRTH": {
-          "type": "string",
-          "minLength": 8,
-          "maxLength": 8
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "SEQ",
+          "LABTEST",
+          "LABRESULT",
+          "D_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "IPOP",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/ipop",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม IPOP",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "AN": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "OPER": {
+            "type": "string",
+            "maxLength": 7,
+            "minLength": 3
+          },
+          "OPTYPE": {
+            "enum": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "PROVIDER": {
+            "type": "string",
+            "maxLength": 6
+          },
+          "DATEIN": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 8
+          },
+          "TIMEIN": {
+            "type": "string",
+            "maxLength": 6,
+            "minLength": 6
+          },
+          "DATEOUT": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 8
+          },
+          "TIMEOUT": {
+            "type": "string",
+            "maxLength": 6,
+            "minLength": 6
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "SEX": {
-          "enum": [
-            "1",
-            "2"
-          ]
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "AN",
+          "OPER",
+          "OPTYPE",
+          "PROVIDER",
+          "DATEIN",
+          "TIMEIN",
+          "DATEOUT",
+          "TIMEOUT",
+          "D_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "IPDX",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/ipdx",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม IPDX",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "AN": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "DIAG": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 3
+          },
+          "DXTYPE": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ]
+          },
+          "PROVIDER": {
+            "type": "string",
+            "maxLength": 6
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "MARRIAGE": {
-          "type": "string"
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "AN",
+          "DIAG",
+          "DXTYPE",
+          "PROVIDER",
+          "D_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "IPDRUG",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/ipdrug",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม IPDRUG",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "AN": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "DID": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "AMOUNT": {
+            "type": "number",
+            "maximum": 999999,
+            "default": 0
+          },
+          "DRUGPRICE": {
+            "type": "number",
+            "maximum": 999999,
+            "default": 0
+          },
+          "DRUGCOST": {
+            "type": "number",
+            "maximum": 999999,
+            "default": 0
+          },
+          "UNIT": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "UNIT_PACK": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "SIGCODE": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "PROVIDER": {
+            "type": "string",
+            "maxLength": 6
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "OCCUPATION": {
-          "type": "string"
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "AN",
+          "DID",
+          "AMOUNT",
+          "DRUGPRICE",
+          "DRUGCOST",
+          "UNIT",
+          "SIGCODE",
+          "D_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "IPD",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/ipd",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม IPD",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "AN": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "DATEADM": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 8
+          },
+          "TIMEADM": {
+            "type": "string",
+            "maxLength": 4,
+            "minLength": 4
+          },
+          "DATEDSC": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 8
+          },
+          "TIMEDSC": {
+            "type": "string",
+            "maxLength": 4,
+            "minLength": 4
+          },
+          "DISCHS": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9"
+            ]
+          },
+          "DISCHT": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "8",
+              "9"
+            ]
+          },
+          "DEPT": {
+            "type": "string",
+            "maxLength": 6
+          },
+          "WARDDSC": {
+            "type": "string",
+            "maxLength": 6
+          },
+          "ADM_W": {
+            "type": "number",
+            "default": 0,
+            "maximum": 900000
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "NATION": {
-          "type": "string"
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "AN",
+          "DATEADM",
+          "TIMEADM",
+          "DATEDSC",
+          "TIMEDSC",
+          "DISCHS",
+          "DISCHT",
+          "DEPT",
+          "D_UPDATE"
+        ]
+      }
+    },
+    {
+      "name": "APPOINT",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "$id": "https://r7.moph.go.th/platform/dataset/std/appoint",
+        "description": "JSON Schema สำหรับตรวจสอบแฟ้ม APPOINT",
+        "properties": {
+          "HOSPCODE": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 10
+          },
+          "HN": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "AN": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "SEQ": {
+            "type": "string",
+            "maxLength": 15
+          },
+          "APPOINT_DATE": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 8
+          },
+          "APPOINT_TIME": {
+            "type": "string",
+            "maxLength": 4
+          },
+          "CLINIC": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "REMARK": {
+            "type": "string",
+            "maxLength": 1024
+          },
+          "D_UPDATE": {
+            "type": "string",
+            "maxLength": 14,
+            "minLength": 14
+          }
         },
-        "IDTYPE": {
-          "enum": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        "CHANGWAT": {
-          "type": "string",
-          "maxLength": 2,
-          "minLength": 2
-        },
-        "AMPHUR": {
-          "type": "string",
-          "maxLength": 2,
-          "minLength": 2
-        },
-        "TAMBOL": {
-          "type": "string",
-          "maxLength": 2
-        },
-        "MOO": {
-          "type": "string",
-          "maxLength": 3
-        },
-        "TYPEAREA": {
-          "enum": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        "D_UPDATE": {
-          "type": "string",
-          "maxLength": 14,
-          "minLength": 14
-        }
-      },
-      "required": [
-        "HOSPCODE",
-        "HN",
-        "CID",
-        "TITLE",
-        "FNAME",
-        "LNAME",
-        "BIRTH",
-        "SEX",
-        "OCCUPATION",
-        "NATION",
-        "CHANGWAT",
-        "AMPHUR",
-        "TAMBOL",
-        "MOO",
-        "TYPEAREA",
-        "D_UPDATE"
-      ]
+        "required": [
+          "HOSPCODE",
+          "HN",
+          "SEQ",
+          "APPOINT_DATE",
+          "APPOINT_TIME",
+          "CLINIC",
+          "D_UPDATE"
+        ]
+      }
     }
   ]
 }
