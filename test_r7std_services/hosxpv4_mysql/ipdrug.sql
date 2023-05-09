@@ -9,9 +9,9 @@ SELECT
   opi.hn AS 'HN',
   opi.an AS 'AN',
   opi.icode AS 'DID',
-  CAST(SUM(opi.qty) as char) as 'AMOUNT',
-  opi.unitprice AS 'DRUGPRICE',
-  opi.cost AS 'DRUGCOST',
+  CAST(SUM(opi.qty) as char) AS 'AMOUNT',
+  CAST(SUM(opi.unitprice) as char) AS 'DRUGPRICE',
+  CAST(SUM(opi.cost) as char) AS 'DRUGCOST',
   (
     SELECT
       d.units
