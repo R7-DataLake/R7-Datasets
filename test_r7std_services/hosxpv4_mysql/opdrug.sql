@@ -10,8 +10,8 @@ SELECT
   opi.vn as 'SEQ',
   opi.icode as 'DID',
   CAST(SUM(opi.qty) as char) as 'AMOUNT',
-  opi.unitprice as 'DRUGPRICE',
-  opi.cost as 'DRUGCOST',
+  CAST(SUM(opi.unitprice) as char) as 'DRUGPRICE',
+  CAST(SUM(opi.cost) as char) as 'DRUGCOST',
   (
     SELECT
       d.units
