@@ -2,7 +2,7 @@
   "platforms": [
     {
       "code": "R7PLATFORM_TEST",
-      "name": "R7 Platform (Test)",
+      "name": "R7 Platform",
       "endpoint": "https://r7.moph.go.th/platform/test/auth/request"
     },
     {
