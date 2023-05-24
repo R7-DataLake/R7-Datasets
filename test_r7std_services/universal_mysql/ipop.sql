@@ -16,4 +16,4 @@ inner join r7platform_ipd as i on
   op.an = i.an
 where
   i.datedsc between '#{start_date}' AND '#{end_date}'
-GROUP BY iop.hn, op.an, op.oper;
+GROUP BY op.hn, op.an, op.oper;
