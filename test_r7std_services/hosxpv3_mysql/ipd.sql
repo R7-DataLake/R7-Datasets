@@ -16,7 +16,7 @@ SELECT
   i.dchstts as 'DISCHS',
   i.ward as 'DEPT',
   i.ward as 'WARDDSC',
-  i.bw as 'ADM_W',
+  CAST(i.bw as char) as 'ADM_W',
   DATE_FORMAT(now(), '%Y%m%d%H%i%s') as 'D_UPDATE'
 FROM ipt as i 
 WHERE i.dchdate BETWEEN '#{start_date}' AND '#{end_date}'
