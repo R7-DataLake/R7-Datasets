@@ -1,14 +1,16 @@
 {
   "platforms": [
     {
-      "code": "R7PLATFORM_TEST",
+      "code": "R7PLATFORM",
       "name": "R7 Platform",
-      "endpoint": "https://r7.moph.go.th/platform/auth/request"
+      "endpoint": "https://r7.moph.go.th/platform/auth/request",
+      "description": "สำหรับส่งข้อมูลมาตรฐานเขตสุขภาพที่ 7"
     },
     {
       "code": "R7PLATFORM_Local",
       "name": "R7 Platform (Local)",
-      "endpoint": "http://localhost:3001/request"
+      "endpoint": "http://localhost:3001/request",
+      "description": "สำหรับทดสอบการส่งข้อมูลที่เครื่อง Local"
     }
   ]
 }
